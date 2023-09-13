@@ -1,0 +1,104 @@
+2023-09-13 10:54:40.607 -03:00 [INF] Starting web application
+2023-09-13 10:54:43.175 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-13 10:54:43.529 -03:00 [INF] Now listening on: http://localhost:5147
+2023-09-13 10:54:43.531 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-13 10:54:43.532 -03:00 [INF] Hosting environment: Development
+2023-09-13 10:54:43.532 -03:00 [INF] Content root path: C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepository PatternIn.Net7\src\MyTrainingSheet.Api
+2023-09-13 10:54:44.479 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/weatherforecast - -
+2023-09-13 10:54:44.618 -03:00 [WRN] Failed to determine the https port for redirect.
+2023-09-13 10:54:44.662 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/weatherforecast - - - 404 0 - 184.4418ms
+2023-09-13 10:55:05.424 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger - -
+2023-09-13 10:55:05.444 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger - - - 301 0 - 18.0589ms
+2023-09-13 10:55:05.444 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/index.html - -
+2023-09-13 10:55:05.613 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/swagger-ui.css - -
+2023-09-13 10:55:05.614 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/index.html - - - 200 - text/html;charset=utf-8 169.9488ms
+2023-09-13 10:55:05.627 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-09-13 10:55:05.628 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/swagger-ui.css - - - 200 144929 text/css 14.8738ms
+2023-09-13 10:55:05.801 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/swagger-ui-bundle.js - -
+2023-09-13 10:55:05.802 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_vs/browserLink - -
+2023-09-13 10:55:05.803 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - -
+2023-09-13 10:55:05.801 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/swagger-ui-standalone-preset.js - -
+2023-09-13 10:55:05.838 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - - - 200 12370 application/javascript;+charset=utf-8 35.2276ms
+2023-09-13 10:55:05.857 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-09-13 10:55:05.859 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 57.6307ms
+2023-09-13 10:55:05.862 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-09-13 10:55:05.863 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 62.2624ms
+2023-09-13 10:55:05.913 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 110.6542ms
+2023-09-13 10:55:05.953 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/favicon-32x32.png - -
+2023-09-13 10:55:05.954 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-09-13 10:55:05.955 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/favicon-32x32.png - - - 200 628 image/png 1.8001ms
+2023-09-13 10:55:06.106 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - -
+2023-09-13 10:55:06.287 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 180.8195ms
+2023-09-13 10:55:38.522 -03:00 [INF] Starting web application
+2023-09-13 10:55:39.015 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-13 10:55:39.100 -03:00 [INF] Now listening on: http://localhost:5147
+2023-09-13 10:55:39.102 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-13 10:55:39.103 -03:00 [INF] Hosting environment: Development
+2023-09-13 10:55:39.103 -03:00 [INF] Content root path: C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepository PatternIn.Net7\src\MyTrainingSheet.Api
+2023-09-13 10:55:40.605 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/index.html - -
+2023-09-13 10:55:40.843 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/index.html - - - 200 - text/html;charset=utf-8 239.9936ms
+2023-09-13 10:55:41.059 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_vs/browserLink - -
+2023-09-13 10:55:41.060 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - -
+2023-09-13 10:55:41.069 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - - - 200 12370 application/javascript;+charset=utf-8 4.8070ms
+2023-09-13 10:55:41.074 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.0364ms
+2023-09-13 10:55:41.337 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - -
+2023-09-13 10:55:41.432 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 95.3272ms
+2023-09-13 10:56:09.964 -03:00 [INF] Starting web application
+2023-09-13 10:56:10.465 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-13 10:56:10.556 -03:00 [INF] Now listening on: http://localhost:5147
+2023-09-13 10:56:10.558 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-13 10:56:10.559 -03:00 [INF] Hosting environment: Development
+2023-09-13 10:56:10.560 -03:00 [INF] Content root path: C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepository PatternIn.Net7\src\MyTrainingSheet.Api
+2023-09-13 10:56:11.766 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/index.html - -
+2023-09-13 10:56:12.013 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/index.html - - - 200 - text/html;charset=utf-8 248.9061ms
+2023-09-13 10:56:12.237 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_vs/browserLink - -
+2023-09-13 10:56:12.238 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - -
+2023-09-13 10:56:12.247 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - - - 200 12370 application/javascript;+charset=utf-8 8.5320ms
+2023-09-13 10:56:12.260 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.0187ms
+2023-09-13 10:56:12.431 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - -
+2023-09-13 10:56:12.528 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.3835ms
+2023-09-13 10:58:39.216 -03:00 [INF] Starting web application
+2023-09-13 10:58:39.810 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-13 10:58:39.918 -03:00 [INF] Now listening on: http://localhost:5147
+2023-09-13 10:58:39.921 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-13 10:58:39.921 -03:00 [INF] Hosting environment: Development
+2023-09-13 10:58:39.922 -03:00 [INF] Content root path: C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepository PatternIn.Net7\src\MyTrainingSheet.Api
+2023-09-13 10:58:41.013 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/index.html - -
+2023-09-13 10:58:41.265 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/index.html - - - 200 - text/html;charset=utf-8 252.8675ms
+2023-09-13 10:58:41.467 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_vs/browserLink - -
+2023-09-13 10:58:41.468 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - -
+2023-09-13 10:58:41.475 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - - - 200 12370 application/javascript;+charset=utf-8 7.5533ms
+2023-09-13 10:58:41.479 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.6821ms
+2023-09-13 10:58:41.663 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - -
+2023-09-13 10:58:41.764 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 100.7111ms
+2023-09-13 10:58:46.184 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/lifts - -
+2023-09-13 10:58:46.187 -03:00 [WRN] Failed to determine the https port for redirect.
+2023-09-13 10:58:46.191 -03:00 [INF] Executing endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-13 10:58:46.748 -03:00 [INF] Setting HTTP status code 200.
+2023-09-13 10:58:46.751 -03:00 [INF] Writing value of type 'ResponseDataModel`1' as Json.
+2023-09-13 10:58:46.757 -03:00 [INF] Executed endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-13 10:58:46.760 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/lifts - - - 200 - application/json;+charset=utf-8 575.9805ms
+2023-09-13 10:59:32.232 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5147/lifts application/json 60
+2023-09-13 10:59:32.233 -03:00 [INF] Executing endpoint 'HTTP: POST /lifts/ => CreateLift'
+2023-09-13 10:59:32.325 -03:00 [INF] Saved 1 entities to in-memory store.
+2023-09-13 10:59:32.329 -03:00 [INF] Setting HTTP status code 201.
+2023-09-13 10:59:32.329 -03:00 [INF] Writing value of type 'ResponseModel' as Json.
+2023-09-13 10:59:32.331 -03:00 [INF] Executed endpoint 'HTTP: POST /lifts/ => CreateLift'
+2023-09-13 10:59:32.332 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5147/lifts application/json 60 - 201 - application/json;+charset=utf-8 99.1356ms
+2023-09-13 10:59:40.768 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/lifts - -
+2023-09-13 10:59:40.774 -03:00 [INF] Executing endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-13 10:59:40.790 -03:00 [INF] Setting HTTP status code 200.
+2023-09-13 10:59:40.792 -03:00 [INF] Writing value of type 'ResponseDataModel`1' as Json.
+2023-09-13 10:59:40.794 -03:00 [INF] Executed endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-13 10:59:40.795 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/lifts - - - 200 - application/json;+charset=utf-8 27.2062ms
+2023-09-13 11:00:03.878 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/fakeError - -
+2023-09-13 11:00:03.880 -03:00 [INF] Executing endpoint 'HTTP: GET /fakeError => FakeError'
+2023-09-13 11:00:08.182 -03:00 [INF] Executed endpoint 'HTTP: GET /fakeError => FakeError'
+2023-09-13 11:00:08.203 -03:00 [ERR] Error happend!
+System.InvalidOperationException: Fake error
+   at Program.<<Main>$>g__FakeError|0_7() in C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepository PatternIn.Net7\src\MyTrainingSheet.Api\Program.cs:line 102
+   at lambda_method8(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location ---
+   at MyTrainingSheet.Api.Middleware.ExceptionHandleMiddleware.Invoke(HttpContext httpContext) in C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepository PatternIn.Net7\src\MyTrainingSheet.Api\Middleware\ExceptionHandleMiddleware.cs:line 19
+2023-09-13 11:00:08.296 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/fakeError - - - 400 - application/json;+charset=utf-8 4421.5234ms
