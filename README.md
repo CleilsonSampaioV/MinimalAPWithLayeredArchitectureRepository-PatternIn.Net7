@@ -1,0 +1,1 @@
+# MinimalAPWithLayeredArchitectureRepository PatternIn.Net7
