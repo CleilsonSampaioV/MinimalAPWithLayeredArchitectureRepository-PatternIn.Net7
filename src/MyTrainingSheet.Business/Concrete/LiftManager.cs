@@ -55,7 +55,7 @@ namespace MyTrainingSheet.Business
                 new ResponseModel { Success = false };
         }
 
-        public async Task<IResponseDataModel<Lift>> GetByLiftName(LiftName name)
+        public async Task<IResponseDataModel<Lift>> GetByLiftName(string name)
         {
             var result = await _liftRepository.GetAsync(x => x.Name == name);
 

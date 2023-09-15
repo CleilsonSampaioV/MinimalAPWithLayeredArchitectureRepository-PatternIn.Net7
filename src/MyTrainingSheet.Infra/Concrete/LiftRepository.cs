@@ -15,7 +15,7 @@ public class LiftRepository : ILiftRepository
 
     public async Task<IResponseModel> CreateAsync(Lift lift)
     {
-        _myTranningSheet.Lifts.Add(lift);
+        _myTranningSheet.lifts.Add(lift);
 
         return await _myTranningSheet.SaveChangesAsync() == 1 ?
             new ResponseModel { Success = true } :
@@ -29,7 +29,7 @@ public class LiftRepository : ILiftRepository
     {
         var liftData = await GetAsync(x => x.Id == id);
         if (!liftData.Success) return new ResponseModel { Success = false, Message = liftData.Message };
-        _myTranningSheet.Lifts.Remove(liftData.Data);
+        _myTranningSheet.lifts.Remove(liftData.Data);
         return await _myTranningSheet.SaveChangesAsync() == 1 ?
             new ResponseModel { Success = true } :
             new ResponseModel
@@ -40,7 +40,7 @@ public class LiftRepository : ILiftRepository
 
     public async Task<IResponseDataModel<Lift>> GetAsync(Expression<Func<Lift, bool>> filter)
     {
-        var data = await _myTranningSheet.Lifts.SingleOrDefaultAsync(filter);
+        var data = await _myTranningSheet.lifts.SingleOrDefaultAsync(filter);
         return data != null ?
             new ResponseDataModel<Lift>
             {
@@ -59,7 +59,7 @@ public class LiftRepository : ILiftRepository
         return new ResponseDataModel<IEnumerable<Lift>>
         {
             Success = true,
-            Data = await _myTranningSheet.Lifts.ToListAsync()
+            Data = await _myTranningSheet.lifts.ToListAsync()
         };
     }
 
@@ -68,7 +68,7 @@ public class LiftRepository : ILiftRepository
         lift.Name = lift.Name;
         lift.Weight = lift.Weight;
         lift.Reps = lift.Reps;
-        _myTranningSheet.Lifts.Update(lift);
+        _myTranningSheet.lifts.Update(lift);
         return await _myTranningSheet.SaveChangesAsync() == 1 ?
           new ResponseModel { Success = true } :
           new ResponseModel

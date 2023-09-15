@@ -1,53 +1,36 @@
-using Microsoft.EntityFrameworkCore;
+using MyTrainingSheet.Api.Extension;
 using MyTrainingSheet.Api.Middleware;
 using MyTrainingSheet.Business;
 using MyTrainingSheet.Domain;
 using MyTrainingSheet.Infra;
-using MyTrainingSheet.Infra.Context;
 using Serilog;
 
-Log.Logger = new LoggerConfiguration()
-    .WriteTo
-    .Console()
-    .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
-    .CreateLogger();
+Log.Logger = MyTrainingSheet.Api.LoggerFactory.CreateLogger();
 
 try
 {
     Log.Information("Starting web application");
 
     var builder = WebApplication.CreateBuilder(args);
-    builder.Host.UseSerilog(); // <-- Add this line
+    builder.Host.UseSerilog();
 
+    Log.Information("Configuring services");
+    ConfigureServices(
+        builder.Services,
+        builder.Configuration
+        );
 
-    // Add services to the container.
-
-    builder.Services.AddControllers();
-    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
-    builder.Services.AddDbContext<MyTranningSheetContext>(opt => opt.UseInMemoryDatabase("LiftList"));
-    //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-
-    builder.Services.AddScoped<ILiftService, LiftManager>();
-    builder.Services.AddScoped<ILiftRepository, LiftRepository>();
+    Log.Information("Building App");
     var app = builder.Build();
 
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseSwagger();
-        app.UseSwaggerUI();
-    }
+    Log.Information("Configuring App");
+    ConfigureApp(
+        app, 
+        app.Environment, 
+        app.Configuration
+        );
 
-    app.UseHttpsRedirection();
-
-    app.UseAuthorization();
-
-    app.MapControllers();
-
-    app.UseExceptionHandleMiddleware();
-
+    Log.Information("Mapping Routes");
     var liftsEndPoint = app.MapGroup("/lifts");
 
     liftsEndPoint.MapGet("/", GetAllLifts);
@@ -58,7 +41,46 @@ try
     liftsEndPoint.MapDelete("/{id}", DeleteLift);
     app.MapGet("/fakeError", FakeError);
 
+    Log.Information("Runnig App");
+
+    app.MigrateDatabase<Program>();
+
     app.Run();
+
+    static void ConfigureServices(
+        IServiceCollection services,
+        IConfiguration configuration
+        )
+    {
+        services.AddControllers();
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen();
+        services.AddBusinnesServices();
+        services.AddInfraServices(configuration);
+    }
+
+    static void ConfigureApp(
+        IApplicationBuilder app,
+        IHostEnvironment env,
+        IConfiguration configuration
+        )
+    {
+        if (env.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+
+        app.UseAuthorization();
+
+        app.UseRouting();
+
+        app.UseEndpoints(endpoint => endpoint.MapControllerRoute(name: "default", pattern: "{controller}/{action=index}/{id}"));
+
+        app.UseExceptionHandleMiddleware();
+    }
 
     static async Task<IResult> GetAllLifts(ILiftService liftService)
     {
@@ -66,7 +88,7 @@ try
         return result.Success ? TypedResults.Ok(result) : TypedResults.BadRequest(result);
     }
 
-    static async Task<IResult> GetLiftByName(ILiftService liftService, LiftName name)
+    static async Task<IResult> GetLiftByName(ILiftService liftService, string name)
     {
         var result = await liftService.GetByLiftName(name);
         return result.Success ? TypedResults.Ok(result) : TypedResults.BadRequest(result);

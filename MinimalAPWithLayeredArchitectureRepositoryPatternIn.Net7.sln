@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTrainingSheet.Domain", "src\MyTrainingSheet.Domain\MyTrainingSheet.Domain.csproj", "{A3C3CD17-4A45-4E22-9DF3-A19BED0654D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrainingSheet.Domain", "src\MyTrainingSheet.Domain\MyTrainingSheet.Domain.csproj", "{A3C3CD17-4A45-4E22-9DF3-A19BED0654D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTrainingSheet.Business", "src\MyTrainingSheet.Business\MyTrainingSheet.Business.csproj", "{3ACA4F45-06D2-450A-925F-E43810D4AA7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrainingSheet.Business", "src\MyTrainingSheet.Business\MyTrainingSheet.Business.csproj", "{3ACA4F45-06D2-450A-925F-E43810D4AA7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTrainingSheet.Infra", "src\MyTrainingSheet.Infra\MyTrainingSheet.Infra.csproj", "{94F7FFA1-7546-42C8-BFBD-789472605828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrainingSheet.Infra", "src\MyTrainingSheet.Infra\MyTrainingSheet.Infra.csproj", "{94F7FFA1-7546-42C8-BFBD-789472605828}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTrainingSheet.Api", "src\MyTrainingSheet.Api\MyTrainingSheet.Api.csproj", "{593269AA-6822-4253-9230-7022F59AFF06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTrainingSheet.Api", "src\MyTrainingSheet.Api\MyTrainingSheet.Api.csproj", "{593269AA-6822-4253-9230-7022F59AFF06}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0ED0998A-8145-41A5-8913-A9C8521AEE8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{593269AA-6822-4253-9230-7022F59AFF06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{593269AA-6822-4253-9230-7022F59AFF06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{593269AA-6822-4253-9230-7022F59AFF06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED0998A-8145-41A5-8913-A9C8521AEE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED0998A-8145-41A5-8913-A9C8521AEE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED0998A-8145-41A5-8913-A9C8521AEE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED0998A-8145-41A5-8913-A9C8521AEE8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

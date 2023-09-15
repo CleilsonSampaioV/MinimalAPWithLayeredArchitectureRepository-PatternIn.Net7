@@ -8,5 +8,5 @@ public interface ILiftService
     Task<IResponseDataModel<IEnumerable<Lift>>> GetAllAsync();
     Task<IResponseModel> UpdateAsync(Lift lift);
     Task<IResponseModel> DeleteAsync(int id);
-    Task<IResponseDataModel<Lift>> GetByLiftName(LiftName name);
+    Task<IResponseDataModel<Lift>> GetByLiftName(string name);
 }

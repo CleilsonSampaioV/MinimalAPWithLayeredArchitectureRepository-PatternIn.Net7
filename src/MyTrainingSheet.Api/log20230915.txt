@@ -1,0 +1,101 @@
+2023-09-15 18:48:09.100 -03:00 [INF] Starting web application
+2023-09-15 18:48:10.435 -03:00 [INF] Configuring services
+2023-09-15 18:48:11.025 -03:00 [INF] Building App
+2023-09-15 18:48:11.557 -03:00 [INF] Configuring App
+2023-09-15 18:48:11.868 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-15 18:48:11.874 -03:00 [INF] Mapping Routes
+2023-09-15 18:48:11.876 -03:00 [INF] Runnig App
+2023-09-15 18:48:12.052 -03:00 [INF] Migrating postresql database.
+2023-09-15 18:48:12.514 -03:00 [INF] Migrated postresql database.
+2023-09-15 18:48:12.740 -03:00 [INF] Now listening on: http://localhost:5147
+2023-09-15 18:48:12.742 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-15 18:48:12.743 -03:00 [INF] Hosting environment: Development
+2023-09-15 18:48:12.744 -03:00 [INF] Content root path: C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepositoryPatternIn.Net7\src\MyTrainingSheet.Api
+2023-09-15 18:48:13.561 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/index.html - -
+2023-09-15 18:48:13.828 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/index.html - - - 200 - text/html;charset=utf-8 268.7534ms
+2023-09-15 18:48:14.045 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_vs/browserLink - -
+2023-09-15 18:48:14.046 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - -
+2023-09-15 18:48:14.077 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - - - 200 12370 application/javascript;+charset=utf-8 30.9869ms
+2023-09-15 18:48:14.096 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.0538ms
+2023-09-15 18:48:14.289 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - -
+2023-09-15 18:48:14.501 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 212.1170ms
+2023-09-15 18:48:27.978 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/lifts - -
+2023-09-15 18:48:27.982 -03:00 [WRN] Failed to determine the https port for redirect.
+2023-09-15 18:48:28.012 -03:00 [INF] Executing endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-15 18:48:28.993 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT l.id, l.name, l.reps, l.weight
+FROM lifts AS l
+2023-09-15 18:48:29.012 -03:00 [INF] Setting HTTP status code 200.
+2023-09-15 18:48:29.014 -03:00 [INF] Writing value of type 'ResponseDataModel`1' as Json.
+2023-09-15 18:48:29.024 -03:00 [INF] Executed endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-15 18:48:29.027 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The converter specified on 'MyTrainingSheet.Domain.Lift.Name' is not compatible with the type 'System.String'.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializationConverterOnAttributeNotCompatible(Type classTypeAttributeIsOn, MemberInfo memberInfo, Type typeToConvert)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetConverterFromAttribute(JsonConverterAttribute converterAttribute, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.ReflectionJsonTypeInfo`1.CreateProperty(Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword)
+   at System.Text.Json.Serialization.Metadata.ReflectionJsonTypeInfo`1.LateAddProperties()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.InitializePropertyCache()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.Configure()
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.<EnsureConfigured>g__ConfigureLocked|143_0()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Boolean resolveIfMutable)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.get_ElementTypeInfo()
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseJsonExtensions.WriteAsJsonAsyncSlow(Stream body, Object value, Type type, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-09-15 18:48:29.125 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/lifts - - - 500 - text/plain;+charset=utf-8 1146.1828ms
+2023-09-15 18:51:14.616 -03:00 [INF] Starting web application
+2023-09-15 18:51:14.891 -03:00 [INF] Configuring services
+2023-09-15 18:51:15.006 -03:00 [INF] Building App
+2023-09-15 18:51:15.243 -03:00 [INF] Configuring App
+2023-09-15 18:51:15.334 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-15 18:51:15.342 -03:00 [INF] Mapping Routes
+2023-09-15 18:51:15.344 -03:00 [INF] Runnig App
+2023-09-15 18:51:15.366 -03:00 [INF] Migrating postresql database.
+2023-09-15 18:51:15.561 -03:00 [INF] Migrated postresql database.
+2023-09-15 18:51:15.637 -03:00 [INF] Now listening on: http://localhost:5147
+2023-09-15 18:51:15.639 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-15 18:51:15.640 -03:00 [INF] Hosting environment: Development
+2023-09-15 18:51:15.641 -03:00 [INF] Content root path: C:\estudo\praticas\MinimalAPWithLayeredArchitectureRepositoryPatternIn.Net7\src\MyTrainingSheet.Api
+2023-09-15 18:51:16.053 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/index.html - -
+2023-09-15 18:51:16.214 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/index.html - - - 200 - text/html;charset=utf-8 162.2444ms
+2023-09-15 18:51:16.426 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_vs/browserLink - -
+2023-09-15 18:51:16.427 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - -
+2023-09-15 18:51:16.434 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_framework/aspnetcore-browser-refresh.js - - - 200 12370 application/javascript;+charset=utf-8 7.5881ms
+2023-09-15 18:51:16.442 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.7517ms
+2023-09-15 18:51:16.645 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - -
+2023-09-15 18:51:16.771 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.3768ms
+2023-09-15 18:51:19.849 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5147/lifts - -
+2023-09-15 18:51:19.853 -03:00 [WRN] Failed to determine the https port for redirect.
+2023-09-15 18:51:19.879 -03:00 [INF] Executing endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-15 18:51:20.386 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT l.id, l.name, l.reps, l.weight
+FROM lifts AS l
+2023-09-15 18:51:20.405 -03:00 [INF] Setting HTTP status code 200.
+2023-09-15 18:51:20.407 -03:00 [INF] Writing value of type 'ResponseDataModel`1' as Json.
+2023-09-15 18:51:20.414 -03:00 [INF] Executed endpoint 'HTTP: GET /lifts/ => GetAllLifts'
+2023-09-15 18:51:20.420 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5147/lifts - - - 200 - application/json;+charset=utf-8 570.6396ms
+2023-09-15 18:51:58.388 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5147/lifts application/json 66
+2023-09-15 18:51:58.390 -03:00 [INF] Executing endpoint 'HTTP: POST /lifts/ => CreateLift'
+2023-09-15 18:52:05.624 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO lifts (id, name, reps, weight)
+VALUES (@p0, @p1, @p2, @p3);
+2023-09-15 18:52:13.574 -03:00 [INF] Setting HTTP status code 201.
+2023-09-15 18:52:13.576 -03:00 [INF] Writing value of type 'ResponseModel' as Json.
+2023-09-15 18:52:13.578 -03:00 [INF] Executed endpoint 'HTTP: POST /lifts/ => CreateLift'
+2023-09-15 18:52:13.579 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5147/lifts application/json 66 - 201 - application/json;+charset=utf-8 15191.5172ms
